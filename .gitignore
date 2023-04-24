@@ -13,14 +13,16 @@
 
 # misc
 .DS_Store
-.env
+# .env
 
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-.env*
+# .env*
 !.env.example.local
 .yarn
 
 .idea
+*.lock
+target
