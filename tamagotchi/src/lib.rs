@@ -108,8 +108,7 @@ extern "C" fn handle() {
         }
         TmgAction::Age => {
             let age = exec::block_timestamp() - tmg.date_of_birth;
-            // ⚠️ TODO: Send a reply about the Tamagotchi age
-            // Hint: the message payload must be TmgReply::Age(age)
+            msg::reply(TmgReply::Age(age), 0).expect("Error in a reply `TmgEvent::Age`");
         }
         TmgAction::Feed => tmg.feed(),
         TmgAction::Play => tmg.play(),
