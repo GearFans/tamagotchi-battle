@@ -14,16 +14,16 @@
 
 ## 目录结构
 
-- [./app](./app) 模板合约
-- [./tamagotchi](./tamagotchi) 宠物合约
-- [./battle](./battle) 对战游戏合约
+- [./app](./app) 模板合约 ( 时间分配: 约 45 分钟 )
+- [./tamagotchi](./tamagotchi) 宠物合约 ( 时间分配: 约 45 分钟 )
+- [./battle](./battle) 对战游戏合约 ( 时间分配: 约 45 分钟 )
 - [./frontend](./frontend) Tamagotchi Battle 游戏前端 ([link](https://tamagotchi-battle.vercel.app))
 
 ## 准备工作
 
 ### 安装 Polkadot.js extension
 
-访问 https://polkadot.js.org/extension/, 选择适合你浏览器的版本 (Chrome/Firefox)
+选择适合你浏览器的版本: [Chrome](https://chrome.google.com/webstore/detail/polkadot%7Bjs%7D-extension/mopnmbcafieddcagagdcbnhejhlodfdd) / [Firefox](https://addons.mozilla.org/en-US/firefox/addon/polkadot-js-extension/)
 
 ### 生成随机钱包地址
 
@@ -31,13 +31,15 @@
 
 ### 获取测试代币
 
-打开 [Gear IDEA](https://idea.gear-tech.io/), 默认使用 Gear Staging Testnet V7 测试网
+打开 [Gear IDEA](https://idea.gear-tech.io/), 授权访问钱包插件
 
-点击右上角齿轮图标, 完成 Captcha 验证, 获取 1K 测试代币
+切换到 Gear Staging Testnet V7 测试网
+
+点击右上角齿轮图标, 完成 Captcha 验证后可获取 1K 测试代币
 
 ### 环境搭建
 
-进入 ./app 目录, 在 GitPod 执行
+进入 [./app](./app) 目录, 在 GitPod 执行
 
 ```
 make init
