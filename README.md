@@ -63,11 +63,3 @@ make build
 - ./app.meta.txt
 
 在 [Gear IDEA](https://idea.gear-tech.io/) 部署合约
-
-## Tamagotchi 合约
-
-[./tamagotchi](./tamagotchi)
-
-## Battle 合约
-
-[./battle](./battle)
