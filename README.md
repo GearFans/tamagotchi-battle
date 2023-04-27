@@ -14,6 +14,7 @@
 
 ## 目录结构
 
+- [./app](./app) 模板合约
 - [./tamagotchi](./tamagotchi) 宠物合约
 - [./battle](./battle) 对战游戏合约
 - [./frontend](./frontend) Tamagotchi Battle 游戏前端 ([link](https://tamagotchi-battle.vercel.app))
@@ -34,9 +35,17 @@
 
 点击右上角齿轮图标, 完成 Captcha 验证, 获取 1K 测试代币
 
-### 环境搭建 / 部署模板合约
+### 环境搭建
 
-在新标签内打开 https://github.com/gear-dapps/app, 进入 GitPod 执行
+进入 ./app 目录, 在 GitPod 执行
+
+```
+make init
+```
+
+### 编译部署模板合约
+
+编译
 
 ```
 make build
