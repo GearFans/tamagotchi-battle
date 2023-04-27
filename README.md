@@ -12,12 +12,14 @@
 
 </div>
 
-## 目录结构
+## 内容主题与时间分配
 
-- [./app](./app) 模板合约 ( 时间分配: 约 45 分钟 )
-- [./tamagotchi](./tamagotchi) 宠物合约 ( 时间分配: 约 45 分钟 )
-- [./battle](./battle) 对战游戏合约 ( 时间分配: 约 45 分钟 )
-- [./frontend](./frontend) Tamagotchi Battle 游戏前端 ([link](https://tamagotchi-battle.vercel.app))
+| File Path | Description | Time Allocation |
+| :---: | :---: | :---: |
+| [./app](./app) | 模板合约 | 约 40 分钟 |
+| [./tamagotchi](./tamagotchi) | 宠物合约 | 约 40 分钟 |
+| [./battle](./battle) | 对战游戏合约 | 约 40 分钟 |
+| [./frontend](./frontend) | 游戏前端&合约交互 | [![Play Button](https://img.icons8.com/material-rounded/24/000000/play--v1.png)](https://tamagotchi-battle.vercel.app) |
 
 ## 准备工作
 
