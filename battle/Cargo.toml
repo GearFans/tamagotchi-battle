@@ -21,3 +21,8 @@ gclient = { git = "https://github.com/gear-tech/gear.git", branch = "dn-revert-a
 tokio = "1"
 hex = "0.4"
 battle-state = { path = "state" }
+
+[workspace]
+members = [
+  "state",
+]
