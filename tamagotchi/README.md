@@ -1,5 +1,14 @@
 # tamagotchi
 
+<div align="center">
+
+  <a href="https://academy.gear-tech.io/course/tamagotchi" target="_blank">
+    <img src="https://lwfiles.mycourse.app/gear-academy-public/358d36a2f81e4bdfe7a2935ca08511d5.png" width="480" alt="Gitpod">
+  </a>
+
+</div>
+
+
 宠物内部状态的定义
 
 ./src/lib.rs

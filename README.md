@@ -12,6 +12,8 @@
 
 </div>
 
+本次 Workshop 中, 我们将尝试在 Gear 上复刻来自日本的 Tamagotchi 电子宠物, 并且体验一款纯链上 NFT 对战游戏
+
 ## 内容主题与时间分配
 
 | File Path | Description | Time Allocation |
