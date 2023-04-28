@@ -12,16 +12,16 @@
 
 </div>
 
-本次 Workshop 中, 我们将尝试在 Gear 上复刻来自日本的 Tamagotchi 电子宠物, 并且体验一款纯链上 NFT 对战游戏
+本次 Workshop 中, 我们将尝试在 Gear 上复刻 Tamagotchi 电子宠物, 体验链上 NFT 对战游戏, 并了解背后的代码逻辑
 
-## 内容主题与时间分配
+## 内容主题大纲
 
-| File Path | Description | Time Allocation |
+| 模块 | 描述 | 目标 |
 | :---: | :---: | :---: |
-| [./app](./app) | 模板合约 | 约 40 分钟 |
-| [./tamagotchi](./tamagotchi) | 宠物合约 | 约 40 分钟 |
-| [./battle](./battle) | 对战游戏合约 | 约 40 分钟 |
-| [./frontend](./frontend) | 游戏前端&合约交互 | [![Play Button](https://img.icons8.com/material-rounded/24/000000/play--v1.png)](https://tamagotchi-battle.vercel.app) |
+| [./app](./app) | 模板合约 | 搭建开发环境 / 了解 Gear 合约项目的结构, 入口函数 / 使用 Gear IDEA 上部署合约 / 向合约发送消息 / 查询合约状态 |
+| [./tamagotchi](./tamagotchi) | 宠物 NFT 合约 | 了解合约代码逻辑 / 创建宠物 / 自定义宠物属性 |
+| [./battle](./battle) | 对战合约 | 了解对战游戏合约运行逻辑 |
+| [./frontend](./frontend) | 游戏前端&合约交互 | 在本地运行游戏前端 / 使用 gear-js 脚本读取合约状态 / 体验游戏 [![Play Button](https://img.icons8.com/material-rounded/24/000000/play--v1.png)](https://tamagotchi-battle.vercel.app) |
 
 ## 准备工作
 
