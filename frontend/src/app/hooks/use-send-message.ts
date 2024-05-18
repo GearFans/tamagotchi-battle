@@ -15,7 +15,7 @@ type SendMessageOptions = {
 };
 
 export function useSendMessage(destination: HexString, metadata: ProgramMetadata | undefined) {
-  const { api } = useApi();
+  const { api, isApiReady } = useApi();
   const { account } = useAccount();
   const alert = useAlert();
 
@@ -51,7 +51,7 @@ export function useSendMessage(destination: HexString, metadata: ProgramMetadata
   };
 
   return (payload: AnyJson, options?: SendMessageOptions) => {
-    if (account && metadata) {
+    if (account && metadata && isApiReady) {
       loadingAlertId.current = alert.loading('Sign In', { title });
 
       const { onSuccess, onError } = options || {};

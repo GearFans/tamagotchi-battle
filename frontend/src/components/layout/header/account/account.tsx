@@ -39,7 +39,7 @@ export const AccountComponent = () => {
       )}
       {account ? (
         <div className="flex gap-4">
-          <GasWallet balance={account.balance} address={account.address} name={account.meta.name} onClick={openModal} />
+          <GasWallet address={account.address} name={account.meta.name} onClick={openModal} />
           <div className="max-w-[260px]">
             <AccountButton address={account.address} name={account.meta.name} onClick={openModal} simple />
           </div>

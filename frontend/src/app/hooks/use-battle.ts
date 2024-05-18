@@ -13,11 +13,11 @@ import { useNavigate } from 'react-router-dom';
 
 function useReadBattleState<T>() {
   const { metadata } = useMetadata(metaBattle);
-  return useReadFullState<T>(ENV.battle, metadata);
+  return useReadFullState<T>(ENV.battle, metadata, "0x");
 }
 
 export function useInitBattleData() {
-  const { api } = useApi();
+  const { api, isApiReady } = useApi();
   // const alert = useAlert();
   const navigate = useNavigate();
   const { setIsAdmin } = useApp();
@@ -79,6 +79,8 @@ export function useInitBattleData() {
   }, [state, account, currentPairIdx]);
 
   useEffect(() => {
+    if (!isApiReady) return;
+
     let unsub: UnsubscribePromise | undefined;
 
     if (metadata && state) {
@@ -87,7 +89,7 @@ export function useInitBattleData() {
           message: { payload, details },
         } = data;
 
-        if (details.isSome && details.unwrap().isReply && !details.unwrap().asReply.statusCode.eq(0)) {
+        if (details.isSome && !details.unwrap().to.eq(0)) {
           // console.log(payload.toHuman());
           // alert.error(`${payload.toHuman()}`, { title: 'Error during program execution' });
         } else {
@@ -113,7 +115,7 @@ export function useInitBattleData() {
     return () => {
       if (unsub) unsub.then((unsubCallback) => unsubCallback());
     };
-  }, [metadata, state, currentPairIdx]);
+  }, [metadata, isApiReady, state, currentPairIdx]);
 
   // track state updates
   useEffect(() => {
