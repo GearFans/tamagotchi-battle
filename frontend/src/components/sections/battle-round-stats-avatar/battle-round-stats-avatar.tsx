@@ -3,6 +3,7 @@ import { TamagotchiAvatar } from 'components/common/tamagotchi-avatar';
 import { BattleStatePlayer } from 'app/types/battles';
 import { Icon } from 'components/ui/icon';
 import { useEffect, useState } from 'react';
+import { toNumber } from 'app/utils';
 import { motion } from 'framer-motion';
 
 type Props = {
@@ -13,7 +14,7 @@ export const BattleRoundStatsAvatar = ({ tamagotchi, isReverse }: Props) => {
   const [dead, setDead] = useState(false);
 
   useEffect(() => {
-    setDead(!tamagotchi.health);
+    setDead(!toNumber(tamagotchi.health));
     return () => setDead(false);
   }, [tamagotchi]);
 
@@ -37,7 +38,7 @@ export const BattleRoundStatsAvatar = ({ tamagotchi, isReverse }: Props) => {
             transition={{ duration: 0.5 }}>
             <TamagotchiAvatar
               className="w-30 xxl:w-48 aspect-square -left-1/2"
-              age={tamagotchi.dateOfBirth}
+              age={toNumber(tamagotchi.dateOfBirth)}
               color={tamagotchi.color}
               isDead={dead}
             />
@@ -56,22 +57,22 @@ export const BattleRoundStatsAvatar = ({ tamagotchi, isReverse }: Props) => {
                 'absolute inset-y-0 w-full rounded-xl bg-primary transition-[width]',
                 isReverse ? 'right-0' : 'left-0',
               )}
-              style={{ width: `${tamagotchi.health / 25}%` }}
+              style={{ width: `${toNumber(tamagotchi.health) / 25}%` }}
             />
           )}
           <div className="relative flex gap-2 items-center justify-center">
             <Icon name="health" className="w-3 xxl:w-3.5 aspect-square" />
-            <span className="font-kanit text-xs font-medium leading-5">{Math.round(tamagotchi.health / 25)} / 100</span>
+            <span className="font-kanit text-xs font-medium leading-5">{Math.round(toNumber(tamagotchi.health) / 25)} / 100</span>
           </div>
         </div>
         <div className={clsx('flex gap-3 tracking-[0.03em]', isReverse && 'flex-row-reverse')}>
           <div className="relative z-1 flex gap-1.5 items-center font-medium font-kanit text-xs leading-5 bg-white/10 py-0.5 px-4 rounded-xl">
             <Icon name="armor" className="w-3 xxl:w-3.5 aspect-square" />
-            <b className="font-bold">{Math.round(tamagotchi.defence / 100)}</b> Armor
+            <b className="font-bold">{Math.round(toNumber(tamagotchi.defence) / 100)}</b> Armor
           </div>
           <div className="relative z-1 flex gap-1.5 items-center font-medium font-kanit text-xs leading-5 bg-white/10 py-0.5 px-4 rounded-xl">
             <Icon name="strength" className="w-3 xxl:w-3.5 aspect-square" />
-            <b className="font-bold">{Math.round(tamagotchi.power / 100)}</b> Strength
+            <b className="font-bold">{Math.round(toNumber(tamagotchi.power) / 100)}</b> Strength
           </div>
         </div>
       </div>

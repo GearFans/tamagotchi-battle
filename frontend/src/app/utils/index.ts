@@ -1,6 +1,11 @@
+import { withoutCommas } from '@gear-js/react-hooks';
 import { AlertContainerFactory } from '@gear-js/react-hooks';
 import { InjectedAccountWithMeta } from '@polkadot/extension-inject/types';
 import { LOCAL_STORAGE } from 'app/consts';
+
+export function toNumber(value: string) {
+  return +withoutCommas(value);
+}
 
 export const copyToClipboard = (key: string, alert: AlertContainerFactory, successfulText?: string) => {
   function unsecuredCopyToClipboard(text: string) {

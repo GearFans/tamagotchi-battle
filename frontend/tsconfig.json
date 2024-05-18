@@ -27,6 +27,7 @@
     "jsx": "react-jsx",
     "baseUrl": "./src",
     "paths": {
+      "react": ["node_modules/@types/react"],
       "@/*": [
         "./src/*"
       ]
@@ -34,5 +35,6 @@
       //      "@/assets/*": ["./src/assets/*"],
       //      "@/components/*": ["./src/components/*"]
     }
+  }
   }
 }

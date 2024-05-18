@@ -10,7 +10,7 @@
   "dependencies": {
     "@fireworks-js/react": "2.10.1",
     "@gear-js/api": "0.36.3",
-    "@gear-js/react-hooks": "0.10.6",
+    "@gear-js/react-hooks": "0.10.5",
     "@gear-js/ui": "0.5.21",
     "@headlessui-float/react": "0.10.1",
     "@headlessui/react": "1.7.7",
@@ -34,8 +34,8 @@
     "web-vitals": "2.1.4"
   },
   "devDependencies": {
-    "@types/react": "18.0.27",
-    "@types/react-dom": "18.0.10",
+    "@types/react": "18.2.0",
+    "@types/react-dom": "18.2.0",
     "@typescript-eslint/eslint-plugin": "5.45.1",
     "@typescript-eslint/parser": "5.45.1",
     "assert": "2.0.0",
