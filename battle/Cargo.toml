@@ -4,7 +4,7 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-gstd = { git = "https://github.com/gear-tech/gear.git",features = ["debug"], branch = "dn-revert-alloc-handling" }
+gstd = { version = "1",features = ["debug"] }
 parity-scale-codec = { version = "3", default-features = false }
 battle-io = { path = "io" }
 tmg-io = { path = "../tamagotchi/io" }
@@ -12,17 +12,16 @@ scale-info = { version = "2", default-features = false }
 hex-literal = "0.3.4"
 
 [build-dependencies]
-gear-wasm-builder = { git = "https://github.com/gear-tech/gear.git", branch = "dn-revert-alloc-handling"}
+gear-wasm-builder = { version = "1" }
 battle-io = { path = "io" }
 
 [dev-dependencies]
-gtest = { git = "https://github.com/gear-tech/gear.git", branch = "dn-revert-alloc-handling"}
-gclient = { git = "https://github.com/gear-tech/gear.git", branch = "dn-revert-alloc-handling" }
+gtest = { version = "1" }
+gclient = { version = "1" }
 tokio = "1"
 hex = "0.4"
-battle-state = { path = "state" }
 
 [workspace]
 members = [
-  "state",
+# "state",
 ]

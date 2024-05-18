@@ -2,6 +2,7 @@
 
 use battle_io::*;
 use gstd::{debug, exec, msg, prelude::*, ActorId, MessageId, ReservationId};
+use gstd::collections::BTreeMap;
 use tmg_io::{TmgAction, TmgReply};
 const MAX_POWER: u16 = 10_000;
 const MAX_RANGE: u16 = 7_000;
@@ -430,7 +431,7 @@ unsafe extern "C" fn init() {
 }
 
 pub async fn get_tmg_info(tmg_id: &ActorId) -> (ActorId, String, u64) {
-    let reply: TmgReply = msg::send_for_reply_as(*tmg_id, TmgAction::TmgInfo, 0)
+    let reply: TmgReply = msg::send_for_reply_as(*tmg_id, TmgAction::TmgInfo, 0, 0)
         .expect("Error in sending a message `TmgAction::TmgInfo")
         .await
         .expect("Unable to decode TmgReply");
@@ -486,12 +487,6 @@ pub fn generate_power(tmg_id: ActorId) -> u16 {
 extern "C" fn state() {
     let battle = unsafe { BATTLE.get_or_insert(Default::default()) };
     msg::reply(battle, 0).expect("Failed to share state");
-}
-
-#[no_mangle]
-extern "C" fn metahash() {
-    let metahash: [u8; 32] = include!("../.metahash");
-    msg::reply(metahash, 0).expect("Failed to share metahash");
 }
 
 fn resolve_battle(players: &mut Vec<Player>, moves: Vec<Option<Move>>) -> (Option<u8>, u16, u16) {
