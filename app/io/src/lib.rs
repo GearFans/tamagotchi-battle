@@ -1,6 +1,6 @@
 #![no_std]
 
-use gmeta::{InOut, Metadata};
+use gmeta::{InOut, Metadata, Out};
 use gstd::{prelude::*, ActorId};
 
 #[derive(Encode, Decode, TypeInfo, Hash, PartialEq, PartialOrd, Eq, Ord, Clone, Copy, Debug)]
@@ -17,5 +17,5 @@ impl Metadata for ContractMetadata {
     type Others = ();
     type Reply = ();
     type Signal = ();
-    type State = Vec<(ActorId, u128)>;
+    type State = Out<Vec<(ActorId, u32)>>;
 }
